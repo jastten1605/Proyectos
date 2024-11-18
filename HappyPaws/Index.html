@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas Loli</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin="" />
+</head>
+<body>
+    <section id="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    
+    </section>
+    <header class="head">
+        <div class="top-bar" id="topBar">
+            <div class="top-text">
+            <img src="media/pasador-de-ubicacion.png"><p>PET STREET - BERGEN,NORWAY</p>
+            <img src="media/correo-electronico.png"><p>PETSHOP@SITE.COM</p>
+            <img src="media/receptor-de-telefono.png"><p>+1 (123) 456 7890</p>
+        </div>
+            <div class="social">
+                <a href="#"><img src="media/facebook.png"></a>
+                <a href="#"><img src="media/gorjeo.png"></a>
+                <a href="#"><img src="media/tik-tok.png"></a>
+                <a href="#"><img src="media/whatsapp.png"></a>
+                <a href="#"><img src="media/youtube.png"></a>
+                <a href="#"><img src="media/instagram.png"></a>
+            </div>
+        </div>
+        <nav class="navbar" id="header">
+            <div class="logo">
+                <img src="media/pata.png">
+                <p>HAPPY PAWS</p>
+            </div>
+            <div class="menu-icon">
+                <img src="media/menu.png" alt="Menu">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Prices</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Adoption</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="head-content">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="media/doggy.webp" alt="Image 1">
+                        <div class="caption">
+                            <H1>Welcome to happy paws</H1>
+                            <p>We offer all the best quality products and services for your adorable pets.</p>
+                                <a href="#" class="boton">Our Services</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="media/slide2.jpg" alt="Image 2">
+                        <div class="caption">
+                            <h1>Enjoy Our Daily Offers</h1>
+                            <p>We have great offers with amazing prices every week, check it out today!</p>
+                                <a href="#" class="boton">Our Offers</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="media/slide3.jpg" alt="Image 3">
+                        <div class="caption">
+                            <H1>We Take care of your pet</H1>
+                            <p>Discover the amazing health services that we can offer to your pets.</p>
+                                <a href="#" class="boton">More About Us</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="media/slide4.jpg" alt="Image 4">
+                        <div class="caption">
+                            <H1>Adopt a Pet</H1>
+                            <p>We have many Adorable Pets who need a home. Share the love, adopt!</p>
+                                <a href="#" class="boton">Adopt Today</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="caja_bullets">
+                    <div class="bullet active" posicion_slide="0"></div>
+                    <div class="bullet" posicion_slide="1"></div>
+                    <div class="bullet" posicion_slide="2"></div>
+                    <div class="bullet" posicion_slide="3"></div>
+                </div>
+        </div>
+    </header>
+    <div class="gear-and-selector">
+        <div class="gear-container" id="gearContainer">
+            <img src="media/rueda.png" alt="Settings" class="gear-icon" id="gearIcon">
+        </div>
+        <div class="color-selector" id="colorSelector">
+            <p>Choose a Color Skin</p>
+            <div class="color-options">
+                <button class="color-btn" data-color="#3498DB" data-secondary-color="#0E4F7C"></button>
+                <button class="color-btn" data-color="#E74C3C" data-secondary-color="#AA180F"></button>
+                <button class="color-btn" data-color="#8E6341" data-secondary-color="#DEB35D"></button>
+                <button class="color-btn" data-color="#567E32" data-secondary-color="#31B767"></button>
+                <button class="color-btn" data-color="#D35400" data-secondary-color="#D68910"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- boton scroll to top -->
+<button id="scroll-to-top" class="scroll-to-top">
+    <img src="media/arriba.png" class="fas fa-chevron-up"></img>
+</button>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <hr>
+        <div class="service-cards">
+            <div class="card">
+                <img src="media/service1.webp" alt="Pet Health">
+                <h3>Pet Health</h3>
+                <p>We offer amazing services to ensure your pet's health with high-quality professionals.</p>
+            </div>
+            <div class="card">
+                <img src="media/service2.webp" alt="Pet Grooming">
+                <h3>Pet Grooming</h3>
+                <p>Choose the best look for your pet with our grooming services.</p>
+            </div>
+            <div class="card">
+                <img src="media/service3.webp" alt="Pet Sitting">
+                <h3>Pet Sitting</h3>
+                <p>Leave your pet in good hands when you travel. We care for all animals in our hotel.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <h2>Our Stats</h2>
+        <hr>
+        <div class="stats-container">
+            <div class="stat">
+                <h3>180</h3>
+                <hr>
+                <p>Customers</p>
+            </div>
+            <div class="stat">
+                <h3>16</h3>
+                <hr>
+                <p>Professionals</p>
+            </div>
+            <div class="stat">
+                <h3>67</h3>
+                <hr>
+                <p>Pets Hosted</p>
+            </div>
+            <div class="stat">
+                <h3>50</h3>
+                <hr>
+                <p>Products</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-clinic">
+        <h1>About Us</h1>
+        <hr>
+        <nav>
+            <button class="tab-btn" data-tab="our-clinic-container">Our Clinic</button>
+            <button class="tab-btn" data-tab="our-philosophy-container">Our Philosophy</button>
+            <button class="tab-btn" data-tab="our-team-container">Our Team</button>
+        </nav>
+        <div class="clinic-container">
+            <div class="our-clinic-container tab-content">
+                
+                <div class="clinic-top">
+                    <div class="clinic-description">
+                        <h2>We take care of your best friend</h2>
+                        <p>Interdum donec eget metus augue unc vel mauris ultricies, vest ao ibulum orci eget, blandit quam elit, eu imperdiet neque semper lorem ipsum dolores viverra elit. Aliquam erat volutpat phase llus ac sodales felis tiam non metus aliquam eros accumsan mollis eget vitae tellusm.</p>
+                    </div>
+                    <div class="clinic-image">
+                        <img src="media/cobayas.webp" alt="Guinea pigs">
+                    </div>
+                </div>
+        
+                <div class="clinic-features">
+                    <div class="feature">
+                        <img src="media/mascotas.png" alt="High Tech Clinic">
+                        <h5>High Tech Clinic</h5>
+                        <p>Suspendisse blandit quam elit, eu imperdiet neque semper lorem ipsum.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="media/perro-hombre.png" alt="Amazing Support">
+                        <h5>Amazing Support</h5>
+                        <p>Suspendisse blandit quam elit, eu imperdiet neque semper lorem ipsum.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="media/premio.png" alt="Award Winner">
+                        <h5>Award Winner</h5>
+                        <p>Suspendisse blandit quam elit, eu imperdiet neque semper lorem ipsum.</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <div class="our-philosophy-container tab-content">
+            <h2>Our Philosophy</h2>
+            <div class="philosophy-content">
+                <p class="philosophy-text">Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum. Sed in lobortis nisl Phasellus ultrices gravida massa luctus ornare ellen tesque turpis lectus, placerat a ultricies a, posuere a nibh fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, 
+                    vestibulum orci eget, viverra elit. Aliquam erat volutpat. Phasellus ac sodales felis tiam non metus aliquam eros accumsan mollis eget vitae tellusm.</p>
+                <iframe class="philosophy-video" width="560" height="315" src="https://www.youtube.com/embed/deN3nt3Sdhc?si=4XL_dVhJngr26zW3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="our-team-container tab-content">
+            <h2>Meet Our Team</h2>
+            <div class="team-member">
+                <img src="media/team1.jpg" alt="Luane Silva">
+                <p>Luane Silva</p>
+                <p class="profesion">Veterinarian</p>
+                <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.</p>
+                <div class="social-team">
+                    <a href="#"><img src="media/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="media/gorjeo.png" alt="Twitter"></a>
+                    <a href="#"><img src="media/tik-tok.png" alt="TikTok"></a>
+                    <a href="#"><img src="media/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="media/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="media/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="media/team2.jpg" alt="John Suen">
+                <p>John Suen</p>
+                <p class="profesion">Caretaker</p>
+                <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.</p>
+                <div class="social-team">
+                    <a href="#"><img src="media/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="media/gorjeo.png" alt="Twitter"></a>
+                    <a href="#"><img src="media/tik-tok.png" alt="TikTok"></a>
+                    <a href="#"><img src="media/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="media/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="media/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="media/team3.jpg" alt="Nancy May">
+                <p>Nancy May</p>
+                <p class="profesion">Specialist</p>
+                <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.</p>
+                <div class="social-team">
+                    <a href="#"><img src="media/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="media/gorjeo.png" alt="Twitter"></a>
+                    <a href="#"><img src="media/tik-tok.png" alt="TikTok"></a>
+                    <a href="#"><img src="media/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="media/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="media/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="media/team4.jpg" alt="Amelie Plin">
+                <p>Amelie Plin</p>
+                <p class="profesion">Veterinarian</p>
+                <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.</p>
+                <div class="social-team">
+                    <a href="#"><img src="media/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="media/gorjeo.png" alt="Twitter"></a>
+                    <a href="#"><img src="media/tik-tok.png" alt="TikTok"></a>
+                    <a href="#"><img src="media/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="media/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="media/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <hr>
+        <div class="testimonial-cards">
+            <div class="testimonial-card active">
+                <img src="media/testimonial1.jpg">
+                <p>“Happy Paws has the best services for pets. I feel safe leaving my dog with them!”</p>
+                <h3>- Sarah J.</h3>
+            </div>
+            <div class="testimonial-card">
+                <img src="media/testimonial2.jpg">
+                <p>“The grooming service is amazing! My cat always looks great after a visit.”</p>
+                <h3>- Alex M.</h3>
+            </div>
+            <div class="testimonial-card">
+                <img src="media/testimonial3.jpg">
+                <p>“Highly recommended! The staff is very professional and friendly.”</p>
+                <h3>- Jamie L.</h3>
+            </div>
+        </div>
+        <div class="testimonial-bullets">
+            <span class="bullet active" data-testimonial="0"></span>
+            <span class="bullet" data-testimonial="1"></span>
+            <span class="bullet" data-testimonial="2"></span>
+        </div>
+    </section>
+    <section class="pricing">
+        <h2>Our Pricing Plans</h2>
+        <hr>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p class="price">$49/month</p>
+                <div class="plan-contain">
+                <ul>
+                    <li>2 Dog walks</li> <br />
+                    <li>1 Vet Visit</li> <br />
+                    <li>1 Pet Spa</li> <br />
+                    <li>10 Vet Calls</li> <br />
+                    <li>Free Support</li> <br />
+                </ul>
+            </div>
+                <a href="#" class="btn">Sign Up Now</a>
+            </div>
+            <div class="pricing-card popular">
+                <h3 class="popu">Advanced</h3>
+                <p class="price">$99/month</p>
+                <ul>
+                    <li>5 Dog walks</li> <br />
+                    <li>3 Vet Visits</li> <br />
+                    <li>5 Pet Spas</li> <br />
+                    <li>20 Vet Calls</li> <br />
+                    <li>Free Support</li> <br />
+                </ul>
+                <a href="#" class="btn">Sign Up Now</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Professional</h3>
+                <p class="price">$199/month</p>
+                <ul>
+                    <li>10 Dog walks</li> <br />
+                    <li>5 Vet Visits</li> <br />
+                    <li>10 Pet Spas</li> <br />
+                    <li>40 Vet Calls</li> <br />
+                    <li>Free Support</li> <br />
+                </ul>
+                <a href="#" class="btn">Sign Up Now</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Extreme</h3>
+                <p class="price">$299/month</p>
+                <ul>
+                    <li>Unlimited Dog walks</li> <br />
+                    <li>Unlimited Vet Visits</li> <br />
+                    <li>Unlimited Pet Spas</li> <br />
+                    <li>Unlimited Vet Calls</li> <br />
+                    <li>Unlimited Support</li> <br />
+                </ul>
+                <a href="#" class="btn">Sign Up Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Discover our Pet Shop and Services</h2>
+            <p>Contact our team, meet us, and make your pet happy in your visit to our Shop. Discover all our amazing products and services to make your pet very healthy and active this winter.</p>
+            <div class="banner-buttons">
+                <a href="#contact" class="btn">CONTACT US</a>
+                <a href="#about" class="btn">MORE ABOUT US</a>
+            </div>
+        </div>
+        <img src="media/calltoaction.png" class="calltoaction" alt="Call to Action">
+        <img src="media/bones.png" class="bones" alt="Bones">
+        <img src="media/bones1.png" class="bones1" alt="Bones1">
+    </section>
+    
+    
+
+    <section class="gallery">
+        <h2>Our Gallery</h2>
+        <hr>
+        <div class="gallery-filters">
+            <button onclick="filterGallery('all')">All</button>
+            <button onclick="filterGallery('dogs-cats')">Dogs and Cats</button>
+            <button onclick="filterGallery('other-pets')">Other Pets</button>
+        </div>
+        <div class="gallery-cards">
+            <div class="gallery-card" data-category="dogs-cats">
+                <img src="media/gallery1.jpg" alt="Mascota 1">
+            </div>
+            <div class="gallery-card" data-category="dogs-cats">
+                <img src="media/gallery2.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="other-pets">
+                <img src="media/gallery3.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="other-pets">
+                <img src="media/gallery4.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="dogs-cats">
+                <img src="media/gallery5.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="other-pets">
+                <img src="media/gallery6.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="dogs-cats">
+                <img src="media/gallery7.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="other-pets">
+                <img src="media/gallery8.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="other-pets">
+                <img src="media/gallery9.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="dogs-cats">
+                <img src="media/gallery10.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="other-pets">
+                <img src="media/gallery11.jpg" alt="Mascota 2">
+            </div>
+            <div class="gallery-card" data-category="dogs-cats">
+                <img src="media/gallery12.jpg" alt="Mascota 2">
+            </div>
+        </div>
+    </section>
+    <section class="offers">
+        <h1>THIS MONTH'S OFFERS</h1>
+        <div class="offers-line"><hr></div>
+        <div class="offers-content-wrapper">
+            <div class="offer">
+                <img src="media/offer1.png" alt="Imagen de perro" class="banner-img">
+                <div class="offers-content">
+                    <h3>Vet Services: <span class="offer-discount">20% OFF</span></h3>
+                    <p>Take advantage of our special offer this month and get 20% off all veterinary services. Visit us today!</p>
+                </div>
+            </div>
+            <div class="offer">
+                <img src="media/offer2.png" alt="Imagen de gato" class="banner-img">
+                <div class="offers-content">
+                    <h3>Pet Grooming: <span class="offer-discount">15% OFF</span></h3>
+                    <p>Experience the best pet grooming services at our shop and save 15% on your next visit. Visit us.</p>
+                </div>
+            </div>
+            <div class="offer">
+                <img src="media/offer3.png" alt="Imagen de perro" class="banner-img">
+                <div class="offers-content">
+                    <h3>Pet Care: <span class="offer-discount">10% OFF</span></h3>
+                    <p>Experience the best pet care services at our shop and save 10% on your next visit. Visit us today!</p>
+                </div>
+            </div>
+        </div>
+        <div class="offers-bullets">
+            <span class="bullet active" data-offer="0"></span>
+            <span class="bullet" data-offer="1"></span>
+            <span class="bullet" data-offer="2"></span>
+        </div>
+    </section>
+    <div class="adoption-section">
+        <h1>ADOPTION</h1>
+        <hr>
+        <div class="adoption-header">
+            <img src="media/adopt.jpg" alt="adopcion" class="adoption-image">
+            <div class="adoption-text">
+                <h2>Looking to Adopt an Animal?</h2>
+                <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ul tricies, vest ibu lum orci eget, viverra elit. Aliquam erat volut pat phas ellus ac sodales felis tiam non metus ali 
+                    quam eros accumsan mollis eget vitaeusm. Aliquam erat volutpat phasellus ac sodales felis tiam non metus ali quam eros accumsan mollis eget vitae tel lusm. Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh. 
+                    Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, viverra elit. Aliquam erat volutpat phasellus ac sodales felis tiam non metus ali quam eros accumsan mollis eget vi tae.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="faq-section">
+            <h2>Frequent Questions</h2>
+            <hr>
+            <div class="faq-item">
+                <h4>Is account registration required?</h4>
+                <p class="hidden">Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, viverra elit.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do I Apply?</h4>
+                <p class="hidden">Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, viverra elit.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What documents do I need to Adopt?</h4>
+                <p class="hidden">Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, viverra elit.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How to choose an Pet?</h4>
+                <p class="hidden">Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, viverra elit.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Are the animals neutered?</h4>
+                <p class="hidden">Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, viverra elit.</p>
+            </div>
+        </div>
+    
+        <div class="pets-section">
+            <h2>Find a New Friend</h2>
+            <hr>
+            <div class="pet-cards">
+            <div class="pet-card">
+                <img src="media/adoption1.jpg" alt="Lilica">
+                <h3>LILICA</h3>
+                <p>Gender: Female<br>Neutered: Yes<br>Age: 5 years</p>
+                <button class="info-button">MORE INFO</button>
+            </div>
+            <div class="pet-card">
+                <img src="media/adoption2.jpg" alt="Charlie">
+                <h3>CHARLIE</h3>
+                <p>Gender: Male<br>Neutered: No<br>Age: 4 months</p>
+                <button class="info-button">MORE INFO</button>
+            </div>
+            <div class="pet-card">
+                <img src="media/adoption3.jpg" alt="Lucky">
+                <h3>LUCKY</h3>
+                <p>Gender: Male<br>Neutered: Yes<br>Age: 1 year</p>
+                <button class="info-button">MORE INFO</button>
+            </div>
+            <div class="pet-card">
+                <img src="media/adoption4.jpg" alt="Lilica">
+                <h3>LILICA</h3>
+                <p>Gender: Female<br>Neutered: Yes<br>Age: 5 years</p>
+                <button class="info-button">MORE INFO</button>
+            </div>
+            <div class="pet-card">
+                <img src="media/adoption5.jpg" alt="Charlie">
+                <h3>CHARLIE</h3>
+                <p>Gender: Male<br>Neutered: No<br>Age: 4 months</p>
+                <button class="info-button">MORE INFO</button>
+            </div>
+            <div class="pet-card">
+                <img src="media/adoption6.jpg" alt="Lucky">
+                <h3>LUCKY</h3>
+                <p>Gender: Male<br>Neutered: Yes<br>Age: 1 year</p>
+                <button class="info-button">MORE INFO</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="brands-section">
+        <h1>Brands We Work With</h1>
+        <hr>
+        <div class="brands-logos">
+            <div class="logos"><img src="media/client1.png" alt="ThemeForest"></div>
+            <div class="logos"><img src="media/client2.png" alt="ActiveDen"></div>
+            <div class="logos"><img src="media/client3.png" alt="AudioJungle"></div>
+            <div class="logos"><img src="media/client4.png" alt="CodeCanyon"></div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2 class="contact-title">GET IN TOUCH</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Information</h3>
+                <p>Contact for additional information:</p>
+                <p><span>📧</span> petshop@site.com or call us</p>
+                <p><span>📞</span> +1 (123) 456 7890</p>
+                <h3>Location & Time</h3>
+                <p><span>📍</span> We are located at Pet City, 304.</p>
+                <p><span>⏰</span> Open from 9 a.m to 10 p.m on weekdays and from 9 a.m to 2 p.m in weekends.</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                    
+                    <label for="message">Enter your message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="location">
+        <div id="map" class="map-container" style="width: 100%; height: 500px;"></div>
+    </section>
+
+    <footer class="footer">
+        <ul class="social-icons">
+            <li><a href="#"><img src="media/facebook.png"></a></li> 
+            <li><a href="#"><img src="media/gorjeo.png"></a></li>
+            <li><a href="#"><img src="media/instagram.png"></a></li>
+            <li><a href="#"><img src="media/youtube.png"></a></li>
+            <li><a href="#"><img src="media/whatsapp.png"></a></li>
+            <li><a href="#"><img src="media/tik-tok.png"></a></li>
+        </ul>
+        <div class="copyright">
+            COPYRIGHT © 2015-2018 Ingrid Kuhn
+        </div>
+    </footer>
+    <script>
+        let previousScroll = window.scrollY;
+        const topBar = document.getElementById("topBar");
+        const header = document.getElementById("header");
+
+        window.addEventListener("scroll", () => {
+            let currentScroll = window.scrollY;
+
+            if (currentScroll === 0) {
+                topBar.style.top = "0";
+                header.style.top = "50px";
+            } else {
+                topBar.style.top = "-55px";
+                header.style.top = "0";
+            }
+
+            previousScroll = currentScroll;
+        });
+
+        
+const gearIcon = document.querySelector('.gear-container'); 
+const colorSelector = document.querySelector('.color-selector');
+const gearContainer = document.querySelector('.gear-container');
+
+gearIcon.addEventListener('click', () => {
+    colorSelector.classList.toggle('visible');
+
+    if (colorSelector.classList.contains('visible')) {
+        gearContainer.classList.add('gear-open');
+        gearContainer.classList.add('moving'); // Clase para mover el engranaje
+    } else {
+        gearContainer.classList.remove('gear-open');
+        gearContainer.classList.remove('moving'); // Remover clase de movimiento
+    }
+});
+
+const colorButtons = document.querySelectorAll('.color-btn');
+colorButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        const selectedColor = e.target.getAttribute('data-color');
+        const selectedSecondaryColor = e.target.getAttribute('data-secondary-color');
+        document.documentElement.style.setProperty('--main-color', selectedColor);
+        document.documentElement.style.setProperty('--secondary-color', selectedSecondaryColor);
+    });
+});
+
+
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+function showTab(tabName, activeButton) {
+    tabContents.forEach(content => {
+        content.style.display = content.classList.contains(tabName) ? 'block' : 'none';
+    });
+
+    tabButtons.forEach(button => {
+        button.classList.remove('active-tab');
+    });
+
+    activeButton.classList.add('active-tab');
+}
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const tabName = button.getAttribute('data-tab');
+        showTab(tabName, button);
+    });
+});
+
+showTab('our-clinic-container', tabButtons[0]);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonials = document.querySelectorAll(".testimonial-card");
+    let currentIndex = 0;
+
+    function showNextTestimonial() {
+        testimonials[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        testimonials[currentIndex].classList.add("active");
+    }
+
+    setInterval(showNextTestimonial, 3000);
+});
+function filterGallery(category) {
+    const cards = document.querySelectorAll('.gallery-card');
+    
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block'; 
+        } else {
+            card.style.display = 'none'; 
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const offers = document.querySelectorAll('.offer');
+    let currentOffer = 0;
+
+    function showNextOffer() {
+        offers[currentOffer].classList.remove('active');
+        currentOffer = (currentOffer + 1) % offers.length;
+        offers[currentOffer].classList.add('active');
+    }
+
+    offers[currentOffer].classList.add('active');
+
+    setInterval(showNextOffer, 3000); 
+});
+
+const petCards = document.querySelector('.pet-cards');
+const cards = document.querySelectorAll('.pet-card');
+let currentIndex = 0;
+const visibleCards = 3;
+
+function showCards() {
+    petCards.style.transform = `translateX(-${currentIndex * 220}px)`;
+    currentIndex++;
+    if (currentIndex + visibleCards > cards.length) {
+        currentIndex = 0;
+    }
+}
+
+setInterval(showCards, 3000);
+
+document.querySelectorAll('.faq-item h4').forEach(header => {
+    header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.classList.toggle('show');
+    });
+});
+
+const mapContainer = document.getElementById("map");
+    if (mapContainer && typeof L !== 'undefined') {
+        const map = L.map('map').setView([40.7382422317298, -74.00887762461242], 20);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        const largeIcon = L.icon({
+            iconUrl: '/img/mapmarker.png',
+            iconSize: [80, 82],
+            iconAnchor: [25, 82],
+            popupAnchor: [0, -76]
+        });
+        L.marker([40.7382422317298, -74.00887762461242], { icon: largeIcon }).addTo(map)
+            .openPopup();
+        console.log("Mapa inicializado exitosamente");
+    } else {
+        console.error("No se encontró el contenedor del mapa o Leaflet no está definido.");
+    }
+
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    const slides = document.querySelector('.slides');
+
+const caja_bullets = document.querySelectorAll('.bullet');
+
+let indiceActual = 0;
+
+
+
+function mostrarSlide(index) {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    caja_bullets.forEach(bullet => bullet.classList.remove('active'));
+    caja_bullets[index].classList.add('active');
+}
+
+
+caja_bullets.forEach(bullet => {
+    bullet.addEventListener('click', () => {
+        indiceActual = bullet.getAttribute('posicion_slide');
+        mostrarSlide(indiceActual);
+    });
+});
+
+
+
+function nextSlide() {
+    indiceActual = (indiceActual + 1) % caja_bullets.length;
+    mostrarSlide(indiceActual);
+}
+setInterval(nextSlide, 3000);
+
+document.querySelectorAll('.testimonial-bullets .bullet').forEach((bullet, index) => {
+    bullet.addEventListener('click', () => {
+        document.querySelectorAll('.testimonial-card').forEach(card => card.classList.remove('active'));
+        document.querySelectorAll('.testimonial-bullets .bullet').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.testimonial-card')[index].classList.add('active');
+        bullet.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.offers-bullets .bullet').forEach((bullet, index) => {
+    bullet.addEventListener('click', () => {
+        document.querySelectorAll('.offer').forEach(offer => offer.classList.remove('active'));
+        document.querySelectorAll('.offers-bullets .bullet').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.offer')[index].classList.add('active');
+        bullet.classList.add('active');
+    });
+});
+
+//preloader
+// Función para ocultar el preloader
+// Esta función se encarga de ocultar la pantalla de carga inicial (preloader)
+function hidePreloader() {
+    // Obtiene el elemento preloader del DOM usando su ID
+    const preloader = document.getElementById('preloader');
+    
+    // Establece la opacidad a 0 para que se desvanezca gradualmente
+    preloader.style.opacity = '0';
+    
+    // Después de 500ms (0.5 segundos), oculta completamente el preloader
+    // usando setTimeout para dar tiempo a que termine la transición de opacidad
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500);
+}
+
+// Evento que se dispara cuando la página ha cargado completamente
+window.addEventListener('load', () => {
+    // Simulamos un tiempo de carga mínimo de 1 segundo
+    setTimeout(hidePreloader, 1000);
+});
+
+const scrollToTopButton = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) { // Mostrar después de 300px de scroll
+        scrollToTopButton.classList.add('visible');
+    } else {
+        scrollToTopButton.classList.remove('visible');
+    }
+});
+
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+    </script>
+</body>
+</html>
