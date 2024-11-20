@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Slider</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">World</div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
+        <nav>
+            <button class="close-btn" aria-label="Close Menu">&times;</button>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#destination">Destination</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <video width="100%" height="auto" autoplay loop muted>
+                    <source src="Videos/video1.mp4" alt="Video1">
+                </video>
+                <div class="caption">
+                    <H1>Tokio</H1>
+                    <p>Una metrópolis vibrante y futurista, Tokio combina tradición y modernidad como ninguna otra ciudad. Desde sus templos milenarios y jardines tranquilos hasta sus rascacielos y 
+                        barrios llenos de neones, cada rincón tiene algo único. 
+                        Sumérgete en su cultura, disfruta de su exquisita gastronomía y explora sus icónicos barrios, como Shibuya y Shinjuku. Tokio es un destino para quienes buscan lo mejor de Oriente.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <video width="100%" height="auto" autoplay loop muted>
+                    <source src="Videos/video2.mp4" alt="video2">
+                </video>
+                <div class="caption">
+                    <H1>Paris</H1>
+                    <p>La "Ciudad de la Luz" es sinónimo de romance, arte e historia. Recorrer sus elegantes avenidas, como los Campos Elíseos, descubrir el encanto de Montmartre o subir a la Torre Eiffel 
+                        al atardecer es una experiencia inolvidable. París cautiva con su arquitectura y museos, como el Louvre, y una escena gastronómica que hará las delicias de cualquier paladar.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <video width="100%" height="auto" autoplay loop muted>
+                    <source src="Videos/video3.mp4" alt="Viedo3">
+                </video>
+                <div class="caption">
+                    <H1>Egipto</H1>
+                    <p> Viajar a Egipto es embarcarse en una aventura por las tierras de los faraones. Las majestuosas pirámides de Giza, el enigmático Valle de los Reyes y el legendario río Nilo conforman 
+                        un paisaje único en el mundo. Sumérgete en la historia antigua, explora los templos de Luxor y Karnak, y disfruta de una travesía que te llevará a una de las culturas más fascinantes de la humanidad.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <video width="100%" height="auto" autoplay loop muted>
+                    <source src="Videos/video4.mp4" alt="Video4">
+                </video>
+                <div class="caption">
+                    <H1>Maldivas</H1>
+                    <p>Un paraíso de aguas cristalinas, arenas blancas y coloridos arrecifes, las Maldivas son el destino ideal para quienes buscan relajación y lujo. Con resorts sobre el agua, playas privadas y 
+                        paisajes marinos espectaculares, este archipiélago invita a descansar y a maravillarse con la naturaleza en su forma más pura.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img id="anterior" src="img/anterior.png" alt="Anterior">
+            <img id="siguiente" src="img/proximo.png" alt="Siguiente">
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+
+</html>
