@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "BeaufortforLOL-BoldItalic";
+    src: url(fonts/BeaufortforLOL-BoldItalic.woff);
+}
+ 
+@font-face {
+    font-family: "BeaufortforLOL-HeavyItalic";
+    src: url(fonts/BeaufortforLOL-HeavyItalic.woff);
+}
+ 
+@font-face {
+    font-family: "CDB13";
+    src: url(fonts/cdb13a7a-2f13-4f7c-b7a3-01b4ccef574d.woff2);
+}
+ 
+@font-face {
+    font-family: "FFBB4";
+    src: url(fonts/ffbb4591-1a9c-443b-9b6e-6ceb6a3ca76b.woff2);
+}
+ 
+@font-face {
+    font-family: "MarkPro-Bold";
+    src: url(fonts/MarkPro-Bold.woff2);
+}
+ 
+@font-face {
+    font-family: "Spiegel-Bold";
+    src: url(fonts/Spiegel-Bold.woff);
+}
+ 
+@font-face {
+    font-family: "Spiegel-Regular";
+    src: url(fonts/Spiegel-Regular.woff);
+}
+ 
+@font-face {
+    font-family: "Spiegel-SemiBold";
+    src: url(fonts/Spiegel-SemiBold.woff);
+}
