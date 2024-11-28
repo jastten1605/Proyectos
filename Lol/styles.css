@@ -274,7 +274,7 @@ nav ul li:hover .submenu {
 }
 
 .featured {
-    background-image: url(/media/fondo_noticias.webp);
+    background-image: url(media/fondo_noticias.webp);
     padding: 4rem 0;
 }
 
@@ -338,7 +338,7 @@ nav ul li:hover .submenu {
 .champion-selector {
     display: flex;
     flex-direction: row;
-    background-image: url(/media/asesino_fondo.avif);
+    background-image: url(media/asesino_fondo.avif);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -492,7 +492,7 @@ nav ul li:hover .submenu {
 .style {
     display: flex;
     flex-direction: row;
-    background-image: url(/media/fondo_skin.avif);
+    background-image: url(media/fondo_skin.avif);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center;
@@ -524,7 +524,7 @@ nav ul li:hover .submenu {
 }
 
 .game-modes {
-    background-image:url(/media/grieta_fondo.avif);
+    background-image:url(media/grieta_fondo.avif);
     margin: 0 auto;
     padding: 2rem;
     display: flex;
