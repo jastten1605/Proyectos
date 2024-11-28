@@ -11,38 +11,38 @@ const champions = {
     asesinos: {
         name: "PYKE",
         title: "El Destripador de los Puertos",
-        image: "/media/pyke.png",
-        background: "/media/asesino_fondo.avif"
+        image: "media/pyke.png",
+        background: "media/asesino_fondo.avif"
     },
     luchadores: {
         name: "MORDEKAISER",
         title: "La Pesadilla de Hierro",
-        image: "/media/morde.png",
-        background: "/media/luchador_fondo.webp"
+        image: "media/morde.png",
+        background: "media/luchador_fondo.webp"
     },
     magos: {
         name: "TWISTED FATE",
         title: "El Maestro de las Cartas",
-        image: "/media/tf.png",
-        background: "/media/mago_fondo.avif"
+        image: "media/tf.png",
+        background: "media/mago_fondo.avif"
     },
     tiradores: {
         name: "JHIN",
         title: "El Virtuoso",
-        image: "/media/jhin.png",
-        background: "/media/adc_fondo.svg"
+        image: "media/jhin.png",
+        background: "media/adc_fondo.svg"
     },
     apoyos: {
         name: "NAUTILUS",
         title: "El Titán Abisal",
-        image: "/media/nautilus.png",
-        background: "/media/support_fondo.avif"
+        image: "media/nautilus.png",
+        background: "media/support_fondo.avif"
     },
     tanques: {
         name: "ORNN",
         title: "Las Llamas de la Forja",
-        image: "/media/ornn.png",
-        background: "/media/tanque_fondo.avif"
+        image: "media/ornn.png",
+        background: "media/tanque_fondo.avif"
     }
 };
 
@@ -87,25 +87,21 @@ document.querySelectorAll('.game-mode').forEach(mode => {
     mode.addEventListener('click', () => {
         const videoSrc = mode.getAttribute('data-video'); 
         const description = mode.getAttribute('data-text'); 
-        const title = mode.getAttribute('data-title'); // Obtén el título desde data-title
+        const title = mode.getAttribute('data-title');
         const videoElement = document.querySelector('.preview-circle video');
         const descriptionElement = document.getElementById('gameModeDescription');
         const container = document.querySelector('.game-modes'); 
 
-        // Actualiza el video
         videoElement.querySelector('source').setAttribute('src', videoSrc);
         videoElement.load(); 
         videoElement.play(); 
 
-        // Actualiza la descripción
         descriptionElement.innerHTML = description;
 
-        // Cambia el fondo según el título
         if (backgrounds[title]) {
             container.style.backgroundImage = `url('${backgrounds[title]}')`;
         }
 
-        // Cambia el estado activo
         document.querySelectorAll('.game-mode').forEach(btn => btn.classList.remove('active'));
         mode.classList.add('active');
     });
