@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #f4f4f4;
+}
+
+
+p {
+    font-family: "Spiegel-Regular", sans-serif;
+}
+
+.btn {
+    font-family: "Spiegel-Regular", sans-serif;
+}
+
+nav ul li{
+    font-family: "CDB13";
+}
+
+span {
+    font-family: "BeaufortforLOL-HeavyItalic";
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #111111;
+    padding: 1.5rem;
+    border-bottom: 2px solid #343434;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.logo {
+    width: 80px;
+}
+
+.logo-lol {
+    width: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    position: relative;
+    padding: 5px 10px;
+}
+
+nav ul li:hover {
+    background-color: #333333;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover,
+nav ul li.active a {
+    color: #D3BB8B;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00A0BA;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li.active a::after {
+    width: 100%;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1a1a;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    z-index: 1000;
+    list-style: none;
+    border-top: 2px solid #00A0BA;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.submenu li {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    min-width: 200px;
+}
+
+.submenu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #333333;
+    color: #C8AA6E;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-des {
+    width: 10px;
+    height: 10px;
+    margin-left: 1px;
+    vertical-align: middle;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+    vertical-align: middle;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 150px;
+    width: 20px;
+    height: 20px;
+}
+
+.menu-search {
+    background-color: #282828;
+    padding: 5px;
+    border-radius: 35%;
+}
+
+.btn-header {
+    display: inline-block;
+    background: linear-gradient(315deg, rgb(11, 196, 226) 0%, rgb(44, 140, 194) 100%);
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn-header:hover {
+    color: #D3BB8B;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top-text{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.top-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.top-text span{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.top-text p{
+    font-size: 1.25rem;
+}
+
+.champion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.champion-card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.champion-card img {
+    width: 100%;
+    height: 550px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.champion-card img:hover {
+    transform: scale(1.15); 
+}
+
+.champion-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    background-color: #0A1428;
+    font-family: "BeaufortforLOL-BoldItalic";
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease; 
+}
+
+.champion-card:hover .champion-name {
+    background-color: #3B4353; 
+}
+
+.footer {
+    background-color: #111111;
+    color: white;
+    width: 100%;
+}
+
+.footer-container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bot-nav {
+    background-color: #292929;
+    border-top: 2px solid #343434;
+    padding: 20px 0;
+}
+
+.bot-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bot-nav li {
+    margin: 5px 10px;
+}
+
+.bot-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: #282828;
+}
+
+.logo-footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-footer img {
+    max-width: 120px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    padding: 20px 0;
+}
+
+.bottom-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.bottom-links a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-size: 14px;
+}
+
+.bottom-links a:hover {
+    background-color: #333333;
+    border-radius: 10px;
+}
+
+.age-ratings {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pegi {
+    width: 60px;
+    height: 70px;
+    margin: 0 10px;
+}
+
+.usk {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+    .champion-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .champion-grid {
+        grid-template-columns: 1fr;
+    }
+}
