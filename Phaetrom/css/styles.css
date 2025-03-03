@@ -1,0 +1,365 @@
+/* Variables globales */
+:root {
+    --primary-color: #8B4513; /* Marrón oscuro */
+    --secondary-color: #A0522D; /* Marrón claro */
+    --accent-color: #FF4500; /* Rojo */
+    --light-orange: #FFA500; /* Naranja claro */
+    --dark-bg: #121212; /* Fondo oscuro */
+    --light-bg: #f8f9fa; /* Fondo claro */
+    --text-light: #ffffff; /* Texto claro */
+    --text-dark: #333333; /* Texto oscuro */
+    --font-family: 'Old Standard TT', serif;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+/* Estilos globales */
+body {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    background-color: var(--light-bg);
+}
+
+.header {
+    background-color: var(--secondary-color);
+}
+
+#dark-mode-button {
+    background-color: transparent;
+    border: 1px solid var(--text-light);
+    color: var(--text-light);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#dark-mode-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+body.dark-mode .navbar-dark {
+    background-color: #1a1a1a !important;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: var(--text-light);
+}
+
+body.dark-mode .btn-outline-light {
+    border-color: var(--text-light);
+    color: var(--text-light);
+}
+
+body.dark-mode .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .contact-info,
+body.dark-mode .weather-text {
+    color: var(--text-light) !important; 
+}
+
+body.dark-mode .info-column {
+    background-color: #2c2c2c; 
+    color: var(--text-light);
+}
+
+body.dark-mode .weather-info {
+    background-color: #2c2c2c; 
+    color: var(--text-light);
+}
+
+body.dark-mode .weather-info strong {
+    color: var(--light-orange); 
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; 
+    font-size: 1.5rem; 
+}
+
+.navbar-brand img {
+    width: 70px; 
+    height: 70px; 
+    margin-right: 10px; 
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 1000px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Secciones */
+.banner,
+.product-categories,
+.testimonials-slider {
+    margin: 0;
+    padding: 100px 0;
+}
+
+/* Separador <hr> */
+.section-divider {
+    border: none;
+    height: 4px;
+    background-color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Tarjetas de categorías */
+.product-categories .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.product-categories .card:hover {
+    transform: translateY(-10px);
+}
+
+.product-categories .card-title {
+    color: var(--text-dark);
+}
+
+.product-categories .card-text {
+    color: #555;
+}
+
+.product-categories .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.product-categories .btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Colores de fondo */
+.bg-orange {
+    background-color: var(--light-orange);
+    color: var(--text-light);
+}
+
+.bg-red {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* Slider de testimonios */
+.testimonials-slider {
+    padding: 100px 0;
+}
+
+.testimonial-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Sección del clima */
+.weather-info {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.weather-info.dark-mode {
+    color: var(--dark-bg);
+}
+
+.weather-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.weather-info strong {
+    color: var(--primary-color);
+}
+
+/* Menú flotante de redes sociales */
+.toggle-sidebar-button {
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    z-index: 1001;
+    background-color: #25d366;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: left 0.5s ease;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-sidebar-button.visible {
+    left: 80px;
+}
+
+.toggle-sidebar-button:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: left 0.5s ease;
+}
+
+.social-sidebar.visible {
+    left: 20px;
+}
+
+.social-sidebar .social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.social-sidebar .social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Estilo personalizado para el fondo de la columna de información */
+.info-column {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: var(--text-light);
+}
+
+.footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer a:hover {
+    color: #ffc107;
+}
+
+.footer h5 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        max-height: 300px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
