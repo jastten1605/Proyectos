@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Phaetrom</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
+                Phaetrom
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button id="dark-mode-button" class="btn btn-outline-light ml-3">🌙</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="espadas.html">Espadas</a>
+                            <a class="dropdown-item" href="hachas.html">Hachas</a>
+                            <a class="dropdown-item" href="lanzas.html">Lanzas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Contacto</h1>
+        <div class="row">
+            <!-- Columna de Información de Contacto -->
+            <div class="col-md-6 info-column">
+                <h2>Contáctanos</h2>
+                <p class="contact-info"><strong>Dirección:</strong> Calle Falsa 123, Málaga, España</p>
+                <p class="contact-info"><strong>Teléfono:</strong> +34 620 223 320</p>
+                <p class="contact-info"><strong>Correo:</strong> info@phaetrom.com</p>
+                <h3 class="mt-4">Horario</h3>
+                <p class="contact-info"><strong>Lunes-Viernes:</strong> 8:00 - 20:00</p>
+                <p class="contact-info"><strong>Sábados:</strong> 9:00 - 14:00</p>
+            </div>
+
+            <!-- Columna del Formulario -->
+            <div class="col-md-6">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Acordeón de Información -->
+        <div class="row mt-4">
+            <h1 class="text-center mb-4">Preguntas Frecuentes</h1>
+            <div class="col-md-12">
+                <div id="accordion">
+                    <!-- Desplegable 1 -->
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Hacen réplicas exactas de armas de videojuegos, animes o películas?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                No realizamos copias exactas debido a derechos de autor, pero diseñamos armas inspiradas en ellas, respetando su esencia y detalles icónicos. Además, podemos personalizar ciertos aspectos según tus preferencias.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Desplegable 2 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿De qué materiales están hechas las armas?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                Trabajamos con acero al carbono, acero inoxidable y otros metales según el tipo de arma. También utilizamos madera, cuero y resinas para los detalles y empuñaduras, asegurando un equilibrio entre calidad y autenticidad.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Desplegable 3 -->
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Las armas son funcionales o solo decorativas?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                Depende del diseño. Algunas espadas y cuchillos pueden afilarse y ser funcionales, mientras que otras están pensadas únicamente para exhibición. Si buscas un arma funcional, háznoslo saber y te asesoraremos sobre las opciones disponibles.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Desplegable 4 -->
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    ¿Cuánto tiempo tardan en fabricar un arma personalizada?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                El tiempo de fabricación varía según la complejidad del diseño, pero en promedio tardamos entre 4 y 8 semanas. Si necesitas un pedido urgente, contáctanos y evaluaremos la posibilidad de acelerar el proceso.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección del Clima -->
+        <section class="container mt-5">
+            <h2 class="text-center mb-4">Clima en Málaga</h2>
+            <div class="weather-info">
+                <p class="weather-text"><strong>Ciudad:</strong> <span id="ciudad"></span></p>
+                <p class="weather-text"><strong>Temperatura mínima:</strong> <span id="temp-min"></span>°C</p>
+                <p class="weather-text"><strong>Temperatura máxima:</strong> <span id="temp-max"></span>°C</p>
+                <p class="weather-text"><strong>Predicción:</strong> <span id="prediccion"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Sección de Enlaces -->
+                <div class="col-md-6">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="#" class="text-white">Personalizados</a></li>
+                        <li><a href="#" class="text-white">Pedidos</a></li>
+                        <li><a href="#" class="text-white">Testimonios</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Sección de Contacto -->
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                        <li><a href="tel:+34608948329" class="text-white">+34 620 223 320</a></li>
+                        <li><a href="espadas.html" class="text-white">Ver Productos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>© 2025 Phaetrom. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menú flotante de redes sociales -->
+    <button id="toggle-sidebar-button" class="toggle-sidebar-button">></button>
+    <div class="social-sidebar">
+        <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="images/x.png" alt="Twitter"></a>
+    </div>
+    
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/tunumero" class="whatsapp-float" target="_blank">
+        <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

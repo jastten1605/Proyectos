@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto Individual - Phaetrom</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
+                Phaetrom
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button id="dark-mode-button" class="btn btn-outline-light ml-3">🌙</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="espadas.html">Espadas</a>
+                            <a class="dropdown-item" href="hachas.html">Hachas</a>
+                            <a class="dropdown-item" href="lanzas.html">Lanzas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img id="producto-imagen" src="" class="img-fluid" alt="Imagen del producto">
+            </div>
+            <div class="col-md-6">
+                <h1 id="producto-nombre"></h1>
+                <p class="text-muted"> <span id="producto-id"></span></p>
+                <p class="lead" id="producto-precio"></p>
+                <p id="producto-descripcion"></p>
+                <button class="btn btn-primary">Agregar al carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Sección de Enlaces -->
+                <div class="col-md-6">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="#" class="text-white">Personalizados</a></li>
+                        <li><a href="#" class="text-white">Pedidos</a></li>
+                        <li><a href="#" class="text-white">Testimonios</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Sección de Contacto -->
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                        <li><a href="tel:+34608948329" class="text-white">+34 620223320</a></li>
+                        <li><a href="espadas.html" class="text-white">Ver Productos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>© 2025 Phaetrom. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menú flotante de redes sociales -->
+    <button id="toggle-sidebar-button" class="toggle-sidebar-button">></button>
+    <div class="social-sidebar">
+        <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="images/x.png" alt="Twitter"></a>
+    </div>
+    
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/tunumero" class="whatsapp-float" target="_blank">
+        <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
