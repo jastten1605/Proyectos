@@ -173,6 +173,11 @@ body.dark-mode .weather-info strong {
     color: var(--text-light);
 }
 
+.filter-button.active {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
 /* Slider de testimonios */
 .testimonials-slider {
     padding: 100px 0;
