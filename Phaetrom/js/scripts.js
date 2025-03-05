@@ -17,24 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Botón para cambiar el modo (puedes agregar un botón en el HTML)
-function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-}
-
-// Aplicar el modo guardado al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('darkMode') === 'true') {
-        document.body.classList.add('dark-mode');
-    }
-});
-
-// Selecciona el botón de modo oscuro
 const darkModeButton = document.getElementById('dark-mode-button');
-
-// Evento para cambiar el modo al hacer clic en el botón
-darkModeButton.addEventListener('click', toggleDarkMode);
+if (darkModeButton) {
+    darkModeButton.addEventListener('click', toggleDarkMode);
+}
 
 // =============================================
 // Validación del Formulario de Contacto
@@ -114,14 +100,14 @@ productImages.forEach(image => {
     });
 });
 
-// 3. Cambiar el color de fondo de un botón al hacer clic
-const addToCartButtons = document.querySelectorAll('.btn-primary');
-addToCartButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        button.style.backgroundColor = 'green';
-        button.textContent = 'Agregado ✔️';
+// 3. Cambiar el color de fondo del botón de "Agregar al carrito" en la página de producto individual
+const agregarCarritoButton = document.getElementById('agregar-carrito');
+if (agregarCarritoButton) {
+    agregarCarritoButton.addEventListener('click', () => {
+        agregarCarritoButton.style.backgroundColor = 'green';
+        agregarCarritoButton.textContent = 'Agregado ✔️';
     });
-});
+}
 
 // 4. Ocultar un elemento al hacer doble clic
 const footer = document.querySelector('footer');
@@ -152,7 +138,6 @@ ejemploAsincrono().then((mensaje) => {
 });
 
 // Selecciona el botón y el menú de redes sociales
-// Selecciona el botón y el menú de redes sociales
 const toggleButton = document.getElementById('toggle-sidebar-button');
 const socialSidebar = document.querySelector('.social-sidebar');
 
@@ -163,7 +148,9 @@ function toggleSocialSidebar() {
 }
 
 // Evento para mostrar/ocultar el menú al hacer clic en el botón
-toggleButton.addEventListener('click', toggleSocialSidebar);
+if (toggleButton) {
+    toggleButton.addEventListener('click', toggleSocialSidebar);
+}
 
 // =============================================
 // Comentarios Adicionales
