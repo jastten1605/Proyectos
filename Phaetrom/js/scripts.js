@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Botón para cambiar el modo (puedes agregar un botón en el HTML)
+// Botón para cambiar el modo 
 const darkModeButton = document.getElementById('dark-mode-button');
 if (darkModeButton) {
     darkModeButton.addEventListener('click', toggleDarkMode);
