@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Filtrar y mostrar los productos
             productCards.forEach(card => {
-                const cardTipo = card.querySelector('.card').getAttribute('data-tipo');
+                const cardTipo = card.getAttribute('data-tipo'); // Obtener el tipo de la tarjeta
                 if (tipo === 'todos' || cardTipo === tipo) {
                     card.style.display = 'block'; // Mostrar el producto
                 } else {
