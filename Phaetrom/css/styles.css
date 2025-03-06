@@ -87,7 +87,7 @@ body.dark-mode .weather-info strong {
 }
 
 body.dark-mode .section-divider {
-    backgrround-color: var(--text-light);
+    background-color: var(--text-light); /* Cambia el color de fondo a blanco */
 }
 
 .navbar-brand {
