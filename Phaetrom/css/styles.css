@@ -86,6 +86,11 @@ body.dark-mode .weather-info strong {
     color: var(--light-orange); 
 }
 
+body.dark-mode .product-categories .card-title,
+body.dark-mode .product-categories .card-text {
+    color: var(--text-light); /* Cambia el color del texto a blanco */
+}
+
 body.dark-mode .section-divider {
     background-color: var(--text-light); /* Cambia el color de fondo a blanco */
 }
