@@ -86,6 +86,10 @@ body.dark-mode .weather-info strong {
     color: var(--light-orange); 
 }
 
+body.dark-mode .section-divider {
+    backgrround-color: var(--text-light);
+}
+
 .navbar-brand {
     display: flex;
     align-items: center; 
