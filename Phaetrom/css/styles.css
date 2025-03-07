@@ -171,15 +171,11 @@ body.dark-mode .section-divider {
     background-color: var(--secondary-color);
 }
 
-/* Colores de fondo */
-.bg-orange {
-    background-color: var(--light-orange);
-    color: var(--text-light);
-}
-
-.bg-red {
-    background-color: var(--accent-color);
-    color: var(--text-light);
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    transition: var(--transition);
 }
 
 .filter-button.active {
